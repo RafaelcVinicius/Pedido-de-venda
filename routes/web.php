@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ProdutoController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +23,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('home')->group(function () {
+
+    Route::resource('/produto', ProdutoController::class);
+    Route::resource('/cliente', ClienteController::class);
+});
