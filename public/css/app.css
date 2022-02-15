@@ -17,7 +17,7 @@ a{
     text-decoration: none;
     color: white;
 }
-header{
+.header-bar{
     position: fixed;
     left: 0px;
     top: 0px;
@@ -31,7 +31,7 @@ header{
     display: flex;
     justify-content: center;
 }
-header > nav{
+.header-bar > nav{
     height: 100%;
     width: 100%;
     max-width: 1280px;
@@ -39,20 +39,24 @@ header > nav{
     justify-content: space-between;
     align-items: center;
 }
-header > nav ul {
+.header-bar > nav ul {
     display: flex;
     height: 100%;
     list-style: none;
 }
-header > nav ul li{
+.header-bar > nav ul li{
     padding: 10px 25px;
     display: flex;
     align-items: center;
 }
-header > nav ul li:hover{
+.header-bar > nav ul li:hover{
     background-color: #053750;
 }
 .active{
     border-top:5px solid #11b0ff;
     border-bottom:5px solid #00000000;
+}
+
+.section-1{
+    margin-top: 130px;
 }

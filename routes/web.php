@@ -26,6 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix('home')->group(function () {
 
-    Route::resource('/produto', ProdutoController::class);
-    Route::resource('/cliente', ClienteController::class);
+    Route::resource('/produtos', ProdutoController::class);    
+    Route::resource('/clientes', ClienteController::class);
 });

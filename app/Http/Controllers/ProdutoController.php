@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produtos;
 use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
@@ -13,7 +14,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('principal.produto');
+        return view('produto.produtos');
     }
 
     /**
@@ -23,7 +24,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        //
+        return view('produto.cadastrar');
     }
 
     /**
@@ -34,7 +35,14 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $dados = new Produtos();
+       $dados->nome = $request->nome;
+       $dados->codbarras = $request->codbarras;
+       $dados->valor = $request->valor;
+       $dados->qtde = $request->qtde;
+       $dados->save();
+       
+       return redirect()->route('produtos.index');
     }
 
     /**
@@ -45,7 +53,7 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -56,7 +64,7 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('produto.editar');
     }
 
     /**

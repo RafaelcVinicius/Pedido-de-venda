@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <header>
+        <header class="header-bar">
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">                          
                 @guest
                     @if (Route::has('login'))
@@ -39,15 +39,15 @@
                         <ul>
                             <li class="{{request()->routeIs('home') ? 'active' : ''}}"><a href="{{route('home')}}">Início</a></li>
                             <li ><a href="#">Pedidos</a></li>
-                            <li class="{{request()->routeIs('cliente.*') ? 'active' : ''}}"><a href="{{route('cliente.index')}}">Clientes</a></li>
-                            <li class="{{request()->routeIs('produto.*') ? 'active' : ''}}"><a href="{{route('produto.index')}}">Produtos</a></li>
+                            <li class="{{request()->routeIs('clientes.*') ? 'active' : ''}}"><a href="{{route('clientes.index')}}">Clientes</a></li>
+                            <li class="{{request()->routeIs('produtos.*') ? 'active' : ''}}"><a href="{{route('produtos.index')}}">Produtos</a></li>
                         </ul>
                         <ul>
                             <li><a href="">Configuração</a></li>
                             <li><a class="logout" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('Sair') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
