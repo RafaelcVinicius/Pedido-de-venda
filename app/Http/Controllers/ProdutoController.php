@@ -14,7 +14,9 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('produto.produtos');
+
+        $dados = Produtos::get();
+        return view('produto.produtos')->with('produtos', $dados);
     }
 
     /**
