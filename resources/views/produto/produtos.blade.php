@@ -21,36 +21,22 @@
                             <th>Código de barras</th>
                             <th>Qtde</th>
                             <th>Valor</th>
+                            <th>Ação</th>
                         </tr>
                     </thead>
                     <tbody>                   
                             @foreach ($produtos as $produto)
                             <tr>
-                                <td>{{$produto->id}}</td>
-                                <td>{{$produto->nome}}</td>
-                                <td>{{$produto->codbarras}}</td>
-                                <td>{{$produto->qtde}}</td>
-                                <td>{{$produto->valor}}</td>
+                                <td class="td-table">{{$produto->id}}</td>
+                                <td class="td-table">{{$produto->nome}}</td>
+                                <td class="td-table">{{$produto->codbarras}}</td>
+                                <td class="td-table">{{$produto->qtde}}</td>
+                                <td class="td-table">{{$produto->valor}}</td>
+                                <td class="td-table">Ação</td>
                             </tr>
                             @endforeach                    
                     </tbody>
-                </table>
-                <div class="tabela-2">
-                    <table id="dataTable" class="acao">
-                        <thead>
-                            <tr>                          
-                                <th>Ação</th>
-                            </tr>
-                        </thead>
-                        <tbody>                   
-                                @foreach ($produtos as $produto)
-                                <tr>
-                                <td>{{$produto->id}}</td>
-                                </tr>
-                                @endforeach                    
-                        </tbody>
-                    </table>
-                </div>
+                </table>               
             </div>
         </div>
     </section>

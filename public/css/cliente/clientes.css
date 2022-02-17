@@ -22,10 +22,40 @@
     align-items: center;
 }
 .cadastro{
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 1280px;
     width: 100%;
     background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #ccc;
+}
+.tb{
+position: relative;
+max-width: 1200px;
+width: 100%;
+display: flex;
+align-items: center;
+}
+
+thead{
+    background-color: #03202e;
+    height: 50px;
+    color: white;
+}
+.tabela-1{
+    width: 1200px;
+}
+.td-table{
+    font-size: 16px;
+    border-bottom: 1px solid #00223388;
+    border-left: 1px solid #00223388;;
+    border-right: 1px solid #00223388;
+    padding: 8px;
+}
+.acao{
+    height: 70px;
+    width: 80px;
 }

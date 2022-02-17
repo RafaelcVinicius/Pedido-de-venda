@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -28,4 +29,11 @@ Route::prefix('home')->group(function () {
 
     Route::resource('/produtos', ProdutoController::class);    
     Route::resource('/clientes', ClienteController::class);
+
+    route::prefix('pedido')->group(function (){
+
+        route::get('/', [PedidoController::class, 'index'])->name('pedido.index');
+
+        route::get('/cadastro', [PedidoController::class, 'cadastro'])->name('pedido.cadastro');
+    });
 });

@@ -38,7 +38,7 @@
                     @else
                         <ul>
                             <li class="{{request()->routeIs('home') ? 'active' : ''}}"><a href="{{route('home')}}">Início</a></li>
-                            <li ><a href="#">Pedidos</a></li>
+                            <li class="{{request()->routeIs('pedido.*') ? 'active' : ''}}" ><a href="{{route('pedido.index')}}">Pedidos</a></li>
                             <li class="{{request()->routeIs('clientes.*') ? 'active' : ''}}"><a href="{{route('clientes.index')}}">Clientes</a></li>
                             <li class="{{request()->routeIs('produtos.*') ? 'active' : ''}}"><a href="{{route('produtos.index')}}">Produtos</a></li>
                         </ul>

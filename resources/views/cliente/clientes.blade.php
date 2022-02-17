@@ -7,21 +7,48 @@
                     <h5>Cliente</h5>
                 </div>
                 <div class="novo">
-                    <a class="cadastrar" href="{{route('produtos.create')}}">Cadastrar</a>
+                    <a class="cadastrar" href="{{route('clientes.create')}}">Cadastrar</a>
                 </div>            
         </header>
         
         <div class="cadastro">
-            <table id="table-clientes">
-                <thead>
-
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
+            <div class="tb">
+                <table id="dataTable" class="tabela-1">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Código de barras</th>
+                            <th>Qtde</th>
+                            <th>Valor</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>                   
+                            @foreach ($clientes as $cliente)
+                            <tr>
+                                <td class="td-table">{{$cliente->id}}</td>
+                                <td class="td-table">{{$cliente->nome}}</td>
+                                <td class="td-table">{{$cliente->codbarras}}</td>
+                                <td class="td-table">{{$cliente->qtde}}</td>
+                                <td class="td-table">{{$cliente->valor}}</td>
+                                <td class="td-table">Ação</td>
+                            </tr>
+                            @endforeach                    
+                    </tbody>
+                </table>               
+            </div>
         </div>
     </section>
 @endsection
 
-<script></script>
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
+<script type="text/javascript"> 
+
+    $(document).ready( function () {
+        $('#dataTable').DataTable();
+    } );
+    
+    </script>

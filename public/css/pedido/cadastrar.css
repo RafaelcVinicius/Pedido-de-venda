@@ -1,0 +1,95 @@
+.header{
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+.titulo h5{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.80);
+    font-size: 35px;
+}
+.cadastrar{
+    display: flex;
+    width: 220px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #fff;
+    background-color: rgb(0, 132, 255);
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+.novo{
+    display: flex;
+}
+.novo button{
+    cursor: pointer;
+}
+.sec-1{
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 5px #ccc;
+    flex-wrap: wrap;
+}
+.sec-1 > div{
+    display: flex;
+    max-width: 1220px;
+    width: 100%;
+    justify-content: space-between;
+}
+.sec-flex{
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    margin-top: 20px;
+
+}
+.artic{
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+}
+.field{
+    border: 1px solid rgba(19, 19, 19, 0.514);
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    border-radius: 25px;
+    height: 45px;
+}
+legend{
+margin-left: 15px;
+padding-left: 5px;
+padding-right: 5px;
+}
+.cl-5{
+    display: flex;
+    max-width: 600px;
+}
+.cl-4{
+    display: flex;
+    max-width: 300px;
+}
+input{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+
+
+}
+Select{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
