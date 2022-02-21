@@ -66,8 +66,8 @@ const inputstatus = document.getElementById("input-status");
 var content = dados.dataset.content;
 var value = dados.dataset.value;
 
-document.querySelector("#input-status").dataset.content = content;
-document.querySelector("#input-status").dataset.value = value;
+inputstatus.dataset.content = content;
+inputstatus.dataset.value = value;
 inputstatus.value = content;
 
 }
